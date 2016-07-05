@@ -5,9 +5,9 @@ var state = ['TX', 'CA', 'WA', 'OR', 'ID'];
 var zip = ['78641', '98335', '83410', '98136', '12345'];
 
 var selNum = Math.floor(Math.random() * number.length, 0);
-var selSt = Math.floor(Math.random() * number.length, 0);
-var selCity = Math.floor(Math.random() * number.length, 0);
-var selState = Math.floor(Math.random() * number.length, 0);
-var selZip = Math.floor(Math.random() * number.length, 0);
+var selSt = Math.floor(Math.random() * street.length, 0);
+var selCity = Math.floor(Math.random() * city.length, 0);
+var selState = Math.floor(Math.random() * state.length, 0);
+var selZip = Math.floor(Math.random() * zip.length, 0);
 
 console.log(number[selNum], street[selSt], city[selCity], state[selState], zip[selZip]);
