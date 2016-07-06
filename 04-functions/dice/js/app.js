@@ -1,0 +1,71 @@
+/**
+ * Creating a page where every time the user hits the "Roll Dice" button, the
+ * screen randomly updates the two dice. Use the html and css code included in
+ * the starter code folder to get started.
+ *
+ * 1) Write down pseudocode for the following program.
+ *
+ *    generate a random number between 1 - 6 and store to a variable, random1
+ *    generate a random number between 1 - 6 and store to a variable, random2
+ *    combine 'dice-' and random1 to form the random class for the first die, firstDie
+ *    combine 'dice-' and random2 to form the random class for the second die, secondDie
+ *    get the first die by ID and update the class to firstDie (hint: document.getElementById)
+ *    get the first die by ID and update the class to secondDie (hint:document.getElementById)
+ *
+ * 2) Convert your pseudocode into javascript.
+ *
+ * 3) Check to see if the Dice Roll has been hit, if it has run the diceRoll function.
+ */
+
+/**
+ * Hooking up an onclick listener
+ *
+ * Get the element using document.getElementById(idString). This element has
+ * an onclick property that can be set to the function you want to run.
+ *
+ * Full example:
+ *
+ * 	   document.getElementById('roll-dice').onclick = rollDice;
+ *
+ *     function rollDice() {
+ *       // code there
+ *     }
+ *
+ * Resources:
+ * 	 - https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
+ */
+
+// Original achimmer code
+// document.getElementById('roll-dice').onclick = function() {
+//   var random1 = Math.ceil(Math.random() * 6);
+//   var random2 = Math.ceil(Math.random() * 6);
+//
+//   var firstDie = 'dice dice-' + random1;
+//   var secondDie = 'dice dice-' + random2;
+//
+//   document.getElementById('first-die').className = firstDie;
+//   document.getElementById('second-die').className = secondDie;
+// };
+
+// Revised code
+document.getElementById('roll-dice').onclick = function() {
+  function getRandomNumber() {
+    var randomNumber = Math.ceil(Math.random() * 6).toString();
+    return randomNumber;
+  }
+
+  var die = document.getElementsByClassName('dice');
+  console.log(die);
+
+  for (var xDice = 0; xDice < die.length; xDice++) {
+    die[xDice].className = getRandomNumber();
+    console.log(xDice);
+  }
+  function rollDice() {
+    die.forEach(function(entry) {
+      entry.className = 'dice-' + getRandomNumber();
+  });
+
+  // document.getElementById('first-die').className = die;
+  // document.getElementById('second-die').className = die;
+};
