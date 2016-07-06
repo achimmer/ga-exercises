@@ -62,5 +62,6 @@ if (person && person.name) {
 // See switch.js
 
 // Loops: While and For
+// Use FOR for arrays for specific quantity of loops, use WHILE for unknown quanity of loops. keep running until an event happens.
 
 // Array.forEach
