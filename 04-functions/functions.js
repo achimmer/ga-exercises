@@ -17,3 +17,6 @@ function speak(words) {
 var test = function(words) {
   return words;
 };
+
+// JS has lexical scoping. A new level of scope is only created when a function is created
+// Global Scope
