@@ -39,6 +39,7 @@ Monkey.prototype.intro = function(name, species, foodsEaten) {
   console.log('Hi, this is ' + this.name + ' I am a ' + this.species + ' I have eaten: ' + foodList);
 };
 
+// New addes the values to the object
 var m1 = new Monkey('Tarzan', 'Ape');
 var m2 = new Monkey('Jane', 'Spider Monkey');
 var m3 = new Monkey('George', 'Lemur Monkey');
