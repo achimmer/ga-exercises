@@ -1,16 +1,16 @@
 $(document).ready(function () {
-   var $loginBtn = $('#login');
-   var $signInView = $('.sign-in-view');
-   var $imageResultsView = $('.image-results-view');
-   var $imagesCont = $('.images');
+  var $loginBtn = $('#login');
+  var $signInView = $('.sign-in-view');
+  var $imageResultsView = $('.image-results-view');
+  var $imagesCont = $('.images');
    // initialize the SDK with our API key
   _500px.init({
-    sdk_key: '8626d07001b7482e7707a6248a3b28bcaf22fd23'
+    sdk_key: 'd345989716f32694edffaa665ccf6d1832d34848'
   });
 
   _500px.getAuthorizationStatus(function (status) {
     if (status == 'authorized') {
-      load()
+      load();
     }
   });
 
@@ -44,9 +44,9 @@ $(document).ready(function () {
         _500px.api('/photos/search', {geo: geo}, function(response) {
           console.log(response.data.photos);
           var photos = response.data.photos;
-          for (var i = 0; i < photos; i++) {
+          for (i in photos) {
             var imageUrl = photos[i].image_url;
-            $imagesCont.append('<img serc="' + imageUrl + '" />');
+            $imagesCont.append('<img class="image" src="' + imageUrl + '" />');
           }
         });
       });
