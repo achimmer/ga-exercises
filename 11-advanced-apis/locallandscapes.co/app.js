@@ -38,13 +38,13 @@ $(document).ready(function () {
                   ',' +
                   radius +
                   'mi';
-
+        var imageSize = '&image_size=440';
         console.log(geo);
 
-        _500px.api('/photos/search', {geo: geo}, function(response) {
+        _500px.api('/photos/search', {geo: geo, imageSize}, function(response) {
           console.log(response.data.photos);
           var photos = response.data.photos;
-          for (i in photos) {
+          for (var i = 0; i < photos.length; i++) {
             var imageUrl = photos[i].image_url;
             $imagesCont.append('<img class="image" src="' + imageUrl + '" />');
           }
