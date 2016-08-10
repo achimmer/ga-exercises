@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .sticky {
+      background: gold;
+      height: 180px;
+      width: 180px;
+      margin: 2px;
+      padding: 20px;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="css/materlize.css" type="stylesheet" />
+  <link rel="css/styles.css" type="stylesheet" />
+  <!-- js -->
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <input id="color" type="color" />
+    <input id="sticky-text" type="text" placeholder="your sicky note" />
+    <button id="submit" type="submission">Submit</button>
+    <div id="sticky-board">
+      <article class="sticky">
+        <span class="sticky-number">1. Replace me with your own sticky notes via javascript. The number should increase everytime you add a new sticky.</span>
+      </article>
+    </div>
+  </div>
+  <script src="app.js"></script>
+
+</body>
+</html>
